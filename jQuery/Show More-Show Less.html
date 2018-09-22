@@ -1,0 +1,104 @@
+<style type="text/css">
+.rv_button.closed:after {content:"\33";}
+.rv_button.opened:after{content:"\32";}
+
+.rv_button1.closed:after {content:"\33";}
+.rv_button1.opened:after{content:"\32";} 
+
+.rv_button_mobile.closed:after {content:"\33";}
+.rv_button_mobile.opened:after{content:"\32";}
+
+.rv_button_mobile1.closed:after {content:"\33";}
+.rv_button_mobile1.opened:after{content:"\32";} 
+</style>
+
+<script type="text/javascript">
+ 	jQuery(document).ready(function() 
+ 	{
+		// Hide the div
+		jQuery('#reveal').hide();
+		var i =1;
+		jQuery('.rv_button').click(function(e)
+		{
+			if(i % 2 == 1)
+			{
+				jQuery(this).text('Minimize');
+			}	
+			else
+			{
+			jQuery(this).text('Learn More');
+			}
+			i = i + 1;
+			e.preventDefault();jQuery("#reveal").slideToggle();
+			jQuery('.rv_button').toggleClass('opened closed');
+ 			jQuery('#reveal2').hide();
+		});
+	});
+ 
+	jQuery(document).ready(function() 
+	{
+		// Hide the div
+		jQuery('#reveal2').hide();
+		var i =1;
+		jQuery('.rv_button1').click(function(e)
+		{
+			if(i % 2 == 1)
+			{
+				jQuery(this).text('Minimize');
+			}
+			else
+			{
+				jQuery(this).text('Learn More');
+			}
+			i = i + 1;
+			e.preventDefault();jQuery("#reveal2").slideToggle();
+			jQuery('.rv_button1').toggleClass('opened closed');
+ 			jQuery('#reveal').hide();
+		});
+	});
+ 
+ 
+ 	jQuery(document).ready(function() 
+ 	{
+		// Hide the div
+		jQuery('#reveal_mobile').hide();
+		var i =1;
+		jQuery('.rv_button_mobile').click(function(e)
+		{
+			if(i % 2 == 1)
+			{
+				jQuery(this).text('Minimize');
+			}
+			else
+			{
+				jQuery(this).text('Learn More');
+			}
+			i = i + 1;
+			e.preventDefault();jQuery("#reveal_mobile").slideToggle();
+			jQuery('.rv_button_mobile').toggleClass('opened closed');
+ 			jQuery('#reveal_mobile1').hide();
+		});
+	});
+ 
+ 	jQuery(document).ready(function() 
+ 	{
+		// Hide the div
+		jQuery('#reveal_mobile1').hide();
+		var i =1;
+		jQuery('.rv_button_mobile1').click(function(e)
+		{
+			if(i % 2 == 1)
+			{
+				jQuery(this).text('Minimize');
+			}
+			else
+			{
+				jQuery(this).text('Learn More');
+			}
+			i = i + 1;
+			e.preventDefault();jQuery("#reveal_mobile1").slideToggle();
+			jQuery('.rv_button_mobile1').toggleClass('opened closed');
+ 			jQuery('#reveal_mobile').hide();
+		});
+	}); 
+</script>
